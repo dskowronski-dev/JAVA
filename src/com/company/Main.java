@@ -12,12 +12,21 @@ public class Main {
         car.model = "C-HR";
         car.color = "Grey";
         car.capacity = 1.2;
+        car.value = 72000.0;
 
         me.aneks = false;
         me.setSalary(3500.0);
+        me.setCar();
+        me.getCar();
         System.out.println(me.getSalary());
         me.aneks = true;
         me.setSalary(6500.0);
+        me.setCar();
+        me.getCar();
+        System.out.println(me.getSalary());
+        me.setSalary(76500.0);
+        me.setCar();
+        me.getCar();
         System.out.println(me.getSalary());
 
 

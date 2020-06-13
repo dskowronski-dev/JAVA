@@ -45,4 +45,17 @@ public class Human {
         return this.car;
     }
 
+    public void setCar() {
+
+        if (salary >= car.value) {
+            System.out.println("Tou have a new car");
+        } else if (salary > (car.value / 12)) {
+            System.out.println("You have a new car and credit");
+        } else {
+            System.out.println("Find new job or go for get a raise");
+            return;
+        }
+        this.car = car;
+    }
+
 }
