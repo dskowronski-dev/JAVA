@@ -42,10 +42,11 @@ public class Human {
     }
 
     public Car getCar() {
+
         return this.car;
     }
 
-    public void setCar() {
+    public void setCar(Car car) {
 
         if (salary >= car.value) {
             System.out.println("Tou have a new car");
