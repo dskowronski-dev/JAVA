@@ -6,4 +6,5 @@ public class Human {
     Animal pet;
     Phone phone;
     private Double salary;
+    Car car;
 }

@@ -7,7 +7,13 @@ public class Main {
         me.firstName = "Dominik";
         me.lastName = "Skowronski";
 
-        Animal dog = new Animal("dog");
+        Car car = new Car();
+        car.producer = "Toyota";
+        car.model = "C-HR";
+        car.color = "Grey";
+        car.capacity = 1.2;
+
+        /*Animal dog = new Animal("dog");
 
         me.pet = dog;
         me.pet.feed();
@@ -28,7 +34,7 @@ public class Main {
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
-        me.pet.feed();
+        me.pet.feed();*/
 
 
     }
