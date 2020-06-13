@@ -8,7 +8,7 @@ public class Human {
     String lastName;
     Animal pet;
     Phone phone;
-    Car car;
+    private Car car;
 
     private Double salary;
 
@@ -19,7 +19,7 @@ public class Human {
     }
 
     public double getSalary() {
-
+        date = new Date();
         System.out.println(date);
         return this.salary;
     }
@@ -37,9 +37,12 @@ public class Human {
             System.out.println("Musisz odebrać aneks umowy od Pani Hani z działu kadr");
         }
         System.out.println("ZUS i US już wiedzą o zmianie wypłaty i nie ma sensu ukrywać dochodu");
-        date = new Date();
+
         this.salary = salary;
-
-
     }
+
+    public Car getCar() {
+        return this.car;
+    }
+
 }

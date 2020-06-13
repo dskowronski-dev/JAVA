@@ -5,4 +5,5 @@ public class Car {
     String model;
     Double capacity;
     String color;
+    Double value;
 }
