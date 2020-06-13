@@ -13,6 +13,11 @@ public class Main {
         car.color = "Grey";
         car.capacity = 1.2;
 
+        me.aneks = true;
+        me.setSalary(3500);
+
+
+
         /*Animal dog = new Animal("dog");
 
         me.pet = dog;
