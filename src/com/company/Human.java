@@ -11,7 +11,7 @@ public class Human {
     Car car;
 
     private Double salary;
-    DateFormat dateFormat = new DateFormat("yyyy/MM/dd HH:mm:ss");
+
     Date date = new Date();
 
     public Human(Double salary) {
@@ -19,6 +19,7 @@ public class Human {
     }
 
     public double getSalary() {
+
         System.out.println(date);
         return this.salary;
     }
@@ -36,11 +37,9 @@ public class Human {
             System.out.println("Musisz odebrać aneks umowy od Pani Hani z działu kadr");
         }
         System.out.println("ZUS i US już wiedzą o zmianie wypłaty i nie ma sensu ukrywać dochodu");
+        date = new Date();
         this.salary = salary;
-    }
 
-    private static class DateFormat {
-        public DateFormat(String date) {
-        }
+
     }
 }
