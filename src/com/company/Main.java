@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Human me = new Human();
+        Human me = new Human((double) 2000);
         me.firstName = "Dominik";
         me.lastName = "Skowronski";
 
@@ -13,8 +13,12 @@ public class Main {
         car.color = "Grey";
         car.capacity = 1.2;
 
-        me.aneks = true;
+        me.aneks = false;
         me.setSalary(3500);
+        System.out.println(me.getSalary());
+        me.aneks = true;
+        me.setSalary(6500);
+        System.out.println(me.getSalary());
 
 
 
