@@ -44,7 +44,8 @@ public class Main {
         System.out.println(me.getSalary());
         System.out.println(car);
         System.out.println(phone);
-
+        phone.turnOn();
+        car.turnOn();
 
 
 
