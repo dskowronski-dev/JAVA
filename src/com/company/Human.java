@@ -9,11 +9,12 @@ public class Human {
     public String firstName;
     public boolean aneks;
     String lastName;
-    Animal pet;
+    public Animal pet;
     Phone phone;
     Date date = new Date();
-    private Car car;
+    public Car car;
     private Double salary;
+    public Double cash;
 
     public Human(Double salary) {
         this.salary = salary;

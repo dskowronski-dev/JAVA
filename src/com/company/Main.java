@@ -10,6 +10,11 @@ public class Main {
         me.firstName = "Dominik";
         me.lastName = "Skowronski";
 
+        Human kowalski = new Human(76000.0);
+        kowalski.firstName = "Jan";
+        kowalski.lastName = "Kowalski";
+        kowalski.cash = 76000.0;
+
         Car car = new Car();
         car.producer = "Toyota";
         car.model = "C-HR";
@@ -17,6 +22,7 @@ public class Main {
         car.capacity = 1.2;
         car.value = 72000.0;
         car.yearOfProduction = 2017;
+
 
         Phone phone = new Phone();
         phone.yearOfProduction = 2020;
@@ -47,6 +53,8 @@ public class Main {
         phone.turnOn();
         car.turnOn();
         car.turnOn();
+        car.sell(me, kowalski, me.car.value);
+
 
 
 

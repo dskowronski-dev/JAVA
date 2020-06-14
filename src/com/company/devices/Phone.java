@@ -1,6 +1,9 @@
 package com.company.devices;
 
-public class Phone extends Device {
+import com.company.Human;
+import com.company.Sellable;
+
+public class Phone extends Device implements Sellable {
     public String producer;
     public String model;
     public Double screenSize;
@@ -22,5 +25,10 @@ public class Phone extends Device {
     @Override
     public void turnOn() {
         System.out.println("Phone TurnOn");
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+
     }
 }

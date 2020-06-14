@@ -2,7 +2,7 @@ package com.company;
 
 import java.io.File;
 
-public class Animal {
+public class Animal implements Sellable {
     static final Double DEFAULT_DOG_WEIGHT = 12.0;
     String species;
     String name;
@@ -34,5 +34,10 @@ public class Animal {
             this.weight--;
             System.out.println("Thanks for walk, i'm hungry" + this.weight);
         }
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+
     }
 }
