@@ -1,7 +1,7 @@
 package com.company;
 
-import com.company.Devices.Car;
-import com.company.Devices.Phone;
+import com.company.devices.Car;
+import com.company.devices.Phone;
 
 import java.util.Date;
 
