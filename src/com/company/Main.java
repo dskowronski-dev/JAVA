@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.Devices.Car;
+import com.company.Devices.Phone;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -13,21 +16,34 @@ public class Main {
         car.color = "Grey";
         car.capacity = 1.2;
         car.value = 72000.0;
+        car.yearOfProduction = 2017;
+
+        Phone phone = new Phone();
+        phone.yearOfProduction = 2020;
+        phone.producer = "Xiaomi";
+        phone.model = "Mi10Pro";
+        phone.os = "Android";
+        phone.screenSize = 6.67;
+
 
         me.aneks = false;
         me.setSalary(3500.0);
+        System.out.println(me.getCar());
         me.setCar(car);
-        me.getCar();
+        System.out.println(me.getCar());
         System.out.println(me.getSalary());
         me.aneks = true;
         me.setSalary(6500.0);
+        System.out.println(me.getCar());
         me.setCar(car);
-        me.getCar();
+        System.out.println(me.getCar());
         System.out.println(me.getSalary());
         me.setSalary(76500.0);
         me.setCar(car);
-        me.getCar();
+        System.out.println(car.model);
         System.out.println(me.getSalary());
+        System.out.println(car);
+        System.out.println(phone);
 
 
 

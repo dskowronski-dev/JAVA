@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.Devices.Car;
+import com.company.Devices.Phone;
+
 import java.util.Date;
 
 public class Human {
@@ -8,11 +11,9 @@ public class Human {
     String lastName;
     Animal pet;
     Phone phone;
-    private Car car;
-
-    private Double salary;
-
     Date date = new Date();
+    private Car car;
+    private Double salary;
 
     public Human(Double salary) {
         this.salary = salary;
