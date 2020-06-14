@@ -5,7 +5,7 @@ import com.company.devices.Phone;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Human me = new Human(2000.0);
         me.firstName = "Dominik";
         me.lastName = "Skowronski";
@@ -15,21 +15,13 @@ public class Main {
         kowalski.lastName = "Kowalski";
         kowalski.cash = 76000.0;
 
-        Car car = new Car();
-        car.producer = "Toyota";
-        car.model = "C-HR";
+        Car car = new Car("Toyota", "C-HR", 2017);
         car.color = "Grey";
         car.capacity = 1.2;
         car.value = 72000.0;
-        car.yearOfProduction = 2017;
 
 
-        Phone phone = new Phone();
-        phone.yearOfProduction = 2020;
-        phone.producer = "Xiaomi";
-        phone.model = "Mi10Pro";
-        phone.os = "Android";
-        phone.screenSize = 6.67;
+        Phone phone = new Phone("Xiaomi", "Mi10Pro", 6.67, "Android", 2020);
 
 
         me.aneks = false;

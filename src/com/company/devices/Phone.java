@@ -10,8 +10,9 @@ public class Phone extends Device implements Sellable {
     public String os;
     public Integer yearOfProduction;
 
-    public Phone() {
-        super(null, null, null);
+    public Phone(String producer, String model, Double screenSize, String os, Integer yearOfProduction) {
+        super(producer, model, yearOfProduction);
+        //super(null ,null, null);
         this.producer = producer;
         this.model = model;
         this.screenSize = screenSize;

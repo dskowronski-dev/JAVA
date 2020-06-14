@@ -12,10 +12,11 @@ public class Car extends Device implements Sellable {
     public Integer yearOfProduction;
 
 
-    public Car() {
-        super(null, null, null);
+    public Car(String producer, String model, Integer yearOfProduction) {
+        super(producer, model, yearOfProduction);
         this.producer = producer;
         this.model = model;
+        this.yearOfProduction = yearOfProduction;
     }
 
     public String toString() {
@@ -29,19 +30,19 @@ public class Car extends Device implements Sellable {
     }
 
     @Override
-    public void sell(Human seller, Human buyer, Double price) {
-        if (seller.car == null) {
-            System.out.println("Nie posiada samochodu");
-            return;
-        } else if (buyer.cash < seller.car.value) {
-            System.out.println("Kupujący ma za mało kasy");
-        } else {
-            buyer.cash -= seller.car.value;
-            seller.cash = seller.cash + price;
-            buyer.car = seller.car;
-            seller.car = null;
-            System.out.println("Transakcja powiodła się");
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
+        if (seller.car != this) {
+            throw new Exception("Nie możesz sprzedać czegoś czego nie masz");
+        } else if (buyer.cash < price) {
+            throw new Exception("Nie masz kasy");
         }
+
+        buyer.cash -= price;
+        seller.cash += price;
+        seller.car = buyer.car;
+        seller.car = null;
+        System.out.println("Transakcja powiodła się");
+
 
     }
 }
