@@ -9,6 +9,7 @@ public class Main {
         Human me = new Human(2000.0);
         me.firstName = "Dominik";
         me.lastName = "Skowronski";
+        me.cash = 100.0;
 
         Human kowalski = new Human(76000.0);
         kowalski.firstName = "Jan";
@@ -45,7 +46,12 @@ public class Main {
         phone.turnOn();
         car.turnOn();
         car.turnOn();
+        System.out.println(me.car);
+        System.out.println(kowalski.car);
         car.sell(me, kowalski, me.car.value);
+        System.out.println(me.car);
+        System.out.println(kowalski.car);
+
 
 
 

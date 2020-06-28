@@ -39,7 +39,7 @@ public class Car extends Device implements Sellable {
 
         buyer.cash -= price;
         seller.cash += price;
-        seller.car = buyer.car;
+        buyer.car = seller.car;
         seller.car = null;
         System.out.println("Transakcja powiodła się");
 
