@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.creatures.Animal;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
@@ -58,10 +59,12 @@ public class Main {
         System.out.println(kowalski.getCar(1));
 
 
+        Animal dog = new Animal("dog") {
+            @Override
+            public void feed() {
 
-
-
-        /*Animal dog = new Animal("dog");
+            }
+        };
 
         me.pet = dog;
         me.pet.feed();
@@ -82,7 +85,7 @@ public class Main {
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
-        me.pet.feed();*/
+        me.pet.feed();
 
 
     }

@@ -1,30 +1,39 @@
-package com.company;
+package com.company.creatures;
+
+import com.company.Human;
+import com.company.Sellable;
 
 import java.io.File;
 
-public class Animal implements Sellable {
+abstract public class Animal implements Sellable, Feedable {
     static final Double DEFAULT_DOG_WEIGHT = 12.0;
+    static final Double DEFAULT_PIG_WEIGHT = 222.0;
+
+    static final Double DEFAULT_FOOD_WEIGHT = 0.5;
     String species;
     String name;
     File pic;
-    private Double weight;
+    protected Double weight;
 
     public Animal(String species) {
         this.species = species;
         if (species == "dog")
             this.weight = DEFAULT_DOG_WEIGHT;
+        else if (species == "pig")
+            this.weight = DEFAULT_PIG_WEIGHT;
     }
 
-    void feed() {
+
+    public void feed(Double foodWeight) {
         if (this.weight <= 0) {
             System.out.println("too late");
         } else {
-            this.weight++;
+            this.weight += DEFAULT_FOOD_WEIGHT;
             System.out.println("thx for food, my weight: " + this.weight);
         }
     }
 
-    void takeForAWalk() {
+    public void takeForAWalk() {
         if (this.weight <= 0) {
             System.out.println("i'm dead you can not go with dead pet");
         } else if (this.weight > 3) {
