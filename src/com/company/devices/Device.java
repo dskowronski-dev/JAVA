@@ -6,6 +6,7 @@ public abstract class Device {
     public String producer;
     public String model;
     public Integer yearOfProduction;
+    public Double value = 1000.0;
 
     public Device(String model, String producer, Integer yearOfProduction) {
         this.model = model;

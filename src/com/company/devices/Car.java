@@ -8,7 +8,7 @@ public class Car extends Device implements Sellable {
     public String model;
     public Double capacity;
     public String color;
-    public Double value;
+
     public Integer yearOfProduction;
 
 
@@ -31,20 +31,23 @@ public class Car extends Device implements Sellable {
 
     @Override
     public void sell(Human seller, Human buyer, Double price) throws Exception {
-        if (seller.car != this) {
-            throw new Exception("Nie możesz sprzedać czegoś czego nie masz");
-        } else if (buyer.cash < price) {
-            throw new Exception("Nie masz kasy");
+        if (!seller.hasCar(this)) {
+            throw new Exception("Nie masz tego samochodu");
         }
-
-        buyer.cash -= price;
+        if (!buyer.hasFreeSpace()) {
+            throw new Exception("Za mały garaż");
+        }
+        if (buyer.cash < price) {
+            throw new Exception("Nie masz tyle PLN");
+        }
+        seller.removeCar(this);
+        buyer.addCar(this);
         seller.cash += price;
-        buyer.car = seller.car;
-        seller.car = null;
-        System.out.println("Transakcja powiodła się");
-
-
+        buyer.cash -= price;
+        System.out.println("Transakcja powiodła się!");
     }
+
 }
+
 
 
