@@ -4,6 +4,10 @@ import com.company.creatures.Animal;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
+import java.util.Arrays;
+import java.util.List;
+
+
 public class Main {
 
     public static void main(String[] args) throws Exception {
@@ -17,7 +21,12 @@ public class Main {
         kowalski.lastName = "Kowalski";
         kowalski.cash = 76000.0;
 
-        Car car = new Car("Toyota", "C-HR", 2017);
+        Car car = new Car("Toyota", "C-HR", 2017) {
+            @Override
+            public void refuel() {
+
+            }
+        };
         car.color = "Grey";
         car.capacity = 1.2;
         car.value = 72000.0;
@@ -66,7 +75,7 @@ public class Main {
             }
         };
 
-        me.pet = dog;
+        /*me.pet = dog;
         me.pet.feed();
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
@@ -85,8 +94,12 @@ public class Main {
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
-        me.pet.feed();
+        me.pet.feed();*/
 
+
+        List<String> appNameList = Arrays.asList("Google Maps", "Instagram");
+        System.out.println("instalAnnApp(String appName): ");
+        phone.installAnnApp("DjiApp");
 
     }
 }

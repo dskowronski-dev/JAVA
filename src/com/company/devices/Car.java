@@ -3,7 +3,7 @@ package com.company.devices;
 import com.company.Human;
 import com.company.Sellable;
 
-public class Car extends Device implements Sellable {
+public abstract class Car extends Device implements Sellable {
     public String producer;
     public String model;
     public Double capacity;
@@ -23,6 +23,7 @@ public class Car extends Device implements Sellable {
         return producer + " " + model + " " + capacity + " " + color + " " + value;
     }
 
+    public abstract void refuel();
 
     @Override
     public void turnOn() {
